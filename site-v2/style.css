@@ -1,0 +1,583 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header et Navigation */
+header {
+    background-color: #2c3e50;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #e8b923;
+}
+
+/* Menu hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #e8b923;
+    color: #2c3e50;
+}
+
+.btn-primary:hover {
+    background-color: #d4a419;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #667eea;
+}
+
+.btn-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.btn-link:hover {
+    color: #764ba2;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+.introduction {
+    background-color: white;
+    text-align: center;
+}
+
+.introduction h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.introduction p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Composer Cards */
+.composers-preview {
+    background-color: #f9f9f9;
+}
+
+.composers-preview .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.composer-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.composer-card:hover {
+    transform: translateY(-5px);
+}
+
+.composer-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.composer-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* CD Promo Section */
+.cd-promo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.cd-promo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cd-promo p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Composer Page */
+.composer-hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.composer-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.composer-content {
+    background-color: white;
+}
+
+.biography, .works, .gallery, .cd-details {
+    margin-bottom: 3rem;
+}
+
+.biography h3, .works h3, .gallery h3, .cd-details h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #e8b923;
+    padding-bottom: 0.5rem;
+}
+
+.biography p, .works p, .cd-details p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.biography ul, .works ul, .cd-details ul {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.biography li, .works li, .cd-details li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* CD Page */
+.cd-hero {
+    background: linear-gradient(135deg, #e8b923 0%, #d4a419 100%);
+    color: #2c3e50;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cd-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.cd-content {
+    background-color: white;
+}
+
+.cd-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.cd-image {
+    text-align: center;
+}
+
+.cd-placeholder {
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 60px 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cd-placeholder p:first-child {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.cd-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cd-info h3 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.cd-info h4 {
+    font-size: 1.3rem;
+    color: #667eea;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cd-info p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.price {
+    font-size: 2rem;
+    color: #e8b923;
+    font-weight: bold;
+}
+
+.cd-actions {
+    margin-top: 2rem;
+}
+
+.tracklist {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.tracklist h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.tracks {
+    list-style: none;
+    counter-reset: track-counter;
+}
+
+.tracks li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    counter-increment: track-counter;
+}
+
+.tracks li:before {
+    content: counter(track-counter) ". ";
+    font-weight: bold;
+    color: #667eea;
+    margin-right: 0.5rem;
+}
+
+.track-title {
+    flex: 1;
+}
+
+.track-duration {
+    color: #999;
+}
+
+/* Contact Page */
+.contact-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-content {
+    background-color: white;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+}
+
+.contact-form-section h3,
+.contact-info-section h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+/* Formulaire */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-message {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+/* Informations de contact */
+.contact-info-section {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-info-item {
+    margin-bottom: 2rem;
+}
+
+.contact-info-item h4 {
+    font-size: 1.3rem;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-item p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.contact-info-item a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.contact-info-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s;
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .composer-hero h2,
+    .cd-hero h2,
+    .contact-hero h2 {
+        font-size: 2rem;
+    }
+
+    .cd-showcase,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .tracks li {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

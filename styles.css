@@ -1,4 +1,4 @@
-/* Reset de certains éléments de base pour une meilleure compatibilité */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -12,57 +12,93 @@ body {
   color: #333;
   padding: 20px;
 }
-
-/* Header */
-header img {
-  width: 100%;  /* l'image prend toute la largeur de son conteneur */
-  max-width: 1200px; /* limite sa largeur max si tu veux */
+.asso-logo{
+  max-width: 40%;
   height: auto;
   display: block;
-  margin: 0 auto;  /* pour la centrer si max-width est active */
+  margin: 0 auto;
+}
+.cd-cover {
+ align-items: center;
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+}
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* HEADER */
+header img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
-/* Titre principal */
+/* TITRE PRINCIPAL */
 h1 {
   font-size: 2.5rem;
-  color: #0056b3;
-  margin-top: 20px;
+  color: #0a3f71;
   text-align: center;
+  margin: 30px 0;
 }
-
-/* Navigation */
 nav {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  justify-content: center;  /* centre horizontalement */
+  gap: 2rem;                /* espace entre les liens */
+  margin: 30px 0;           /* marge au-dessus et en-dessous */
+  padding: 0;
 }
-
 nav a {
+  position: relative;
   color: #0056b3;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
   transition: color 0.3s;
+  padding: 5px 0 8px; /* plus d'espace en bas */
+  display: inline-block;
 }
 
-nav a:hover {
-  color: #003f75;
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0%;
+  max-width: 70%;  /* largeur max de la ligne */
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease-in-out;
+  border-radius: 1px; /* arrondit un peu les bords */
 }
 
-/* Section principale - Histoire de la famille */
+nav a:hover::after {
+  width: 70%;  /* la ligne s'étend jusqu'à 70% de la largeur du lien */
+}
+
+
+
+/* SECTION HISTOIRE */
 .history-family {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
-  margin-top: 40px;
+  margin: 100px ;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .history-family h2 {
   font-size: 2rem;
-  color: #003f75;
+  color: #0a3f71;
   margin-bottom: 20px;
 }
 
@@ -70,52 +106,89 @@ nav a:hover {
   font-size: 1.1rem;
   margin-bottom: 20px;
   line-height: 1.6;
+  text-align: justify;
 }
 
-/* Images dans la section historique */
 .history-family img {
-  max-width: 100%; /* L'image prend toute la largeur disponible */
-  height: auto;    /* Conserver les proportions de l'image */
+  max-width: 100%;
+  height: auto;
   display: block;
-  margin-top: 20px;
-  border-radius: 8px; /* Arrondir les coins */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une légère ombre */
-  margin-bottom: 20px; /* Ajouter de l'espace après chaque image */
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Si tu veux des tailles différentes pour chaque image */
-.history-family img:nth-of-type(1) { /* L'arbre généalogique */
-  max-width: 60%; /* Réduit la taille de l'arbre généalogique */
-  margin-left: auto; /* Centrer horizontalement */
-  margin-right: auto;
+.history-family img:nth-of-type(1) {
+  max-width: 60%;
 }
 
-.history-family img:nth-of-type(2) { /* Pochette CD */
-  max-width: 50%; /* Réduit la taille de la pochette du CD */
-  margin-left: auto;
-  margin-right: auto;
+.history-family img:nth-of-type(2) {
+  max-width: 50%;
+}
+
+/* BIOGRAPHIE */
+.biography {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 60px 20px;
+  text-align: justify;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+/* LISTES STYLÉES */
+.list,
+.list2 {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  font-style: normal
+  ;
+}
+
+.list h3,
+.list2 h3 {
+  color: darkred;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.list ul,
+.list2 ul {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.list li,
+.list2 li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 
-/* Footer */
+
+/* FOOTER */
 .footer {
-  background-color: #0056b3;
+  background-color: #0a3f71;
   color: white;
-  padding: 20px 0;
   text-align: center;
+  padding: 20px;
   margin-top: 40px;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-links {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px 0;
 }
 
 .footer-links li {
@@ -142,107 +215,86 @@ nav a:hover {
 .mentions a {
   color: white;
   text-decoration: none;
-  font-weight: bol d;
+  font-weight: bold;
 }
 
 .mentions a:hover {
   text-decoration: underline;
 }
+
+/* IMAGES GLOBALES */
 img {
-  max-width: 300px;
+  max-width: 20%;
   height: auto;
   display: block;
-  margin: 0 auto; /* Centrer les images */
-}
-.biography {
-  
-  font-size: 1.1rem;
-  line-height: 1.6;
-  padding: 200px;
-  text-align: center; /* Justifier le texte */
-}
-ul {
-  text-align: justify; /* Justifier le texte des listes */
-  padding-top: 20px m,;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
-.list {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  width: 100%;
-  box-sizing: border-box;
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2,
+  .history-family h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .history-family img:nth-of-type(1),
+  .history-family img:nth-of-type(2) {
+    max-width: 90%;
+  }
+
+  .biography {
+    padding: 2rem 1rem;
+  }
+
+  .list,
+  .list2 {
+    padding: 1rem;
+  }
+
+  .footer-links li {
+    display: block;
+    margin: 10px 0;
+  }
 }
 
-.list h3 {
-  color: darkred;
-  font-size: 1.4rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
+@media screen and (max-width: 480px) {
+  img{
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
 
-.list ul {
-  padding-left: 1.2rem;
-  margin: 0;
-}
+  nav a {
+    font-size: 0.95rem;
+  }
 
-.list li {
-  margin-bottom: 0.5rem;
-}
+  .list h3,
+  .list2 h3 {
+    font-size: 1.2rem;
+  }
 
-.list small {
-  font-style: italic;
-  color: #555;
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-h2 {
-  color: darkred;
-  margin-bottom: 1.5rem;
-}
-
-.list2 {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-}
-
-.list2 h3 {
-  color: darkred;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.list2 ul {
-  padding-left: 1.3rem;
-}
-
-.list2 ul ul {
-  padding-left: 1.2rem;
-  margin-top: 0.3rem;
-}
-
-.list2 li {
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-.cd-section{
-  font-family: Arial, sans-serif;
+  .mentions {
+    font-size: 0.85rem;
+  }
 }
