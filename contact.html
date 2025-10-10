@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Association</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>César Geloso & Pénélope Bigazzi</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cesar-geloso.html">César Geloso</a></li>
+                <li><a href="penelope-bigazzi.html">Pénélope Bigazzi</a></li>
+                <li><a href="cd.html">Notre CD</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <p class="subtitle">Nous serions ravis d'échanger avec vous</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Formulaire de contact -->
+                    <div class="contact-form-section">
+                        <h3>Envoyez-nous un message</h3>
+                        <form action="https://formspree.io/f/myznnpky" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Votre email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Sujet *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="info">Demande d'information</option>
+                                    <option value="cd">Commander un CD</option>
+                                    <option value="event">Événements</option>
+                                    <option value="other">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Votre message *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <!-- ZONE À PERSONNALISER : Informations de contact -->
+                    <div class="contact-info-section">
+                        <h3>Nos coordonnées</h3>
+                        
+                        <div class="contact-info-item">
+                            <h4>📧 Email</h4>
+                            <p><strong>Ajoutez votre email ici</strong></p>
+                            <!-- Exemple : <p><a href="mailto:contact@association.fr">contact@association.fr</a></p> -->
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h4>📞 Téléphone</h4>
+                            <p><strong>Ajoutez votre numéro ici</strong></p>
+                            <!-- Exemple : <p><a href="tel:+33123456789">01 23 45 67 89</a></p> -->
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h4>📍 Adresse</h4>
+                            <p><strong>Ajoutez votre adresse ici</strong></p>
+                            <!-- Exemple :
+                            <p>123 Rue de la Musique<br>
+                            75001 Paris<br>
+                            France</p>
+                            -->
+                        </div>
+
+                        <div class="contact-info-item">
+                            <h4>🕒 Horaires</h4>
+                            <p><strong>Ajoutez vos horaires ici</strong></p>
+                            <!-- Exemple :
+                            <p>Lundi - Vendredi : 9h - 18h<br>
+                            Samedi : 10h - 16h<br>
+                            Dimanche : Fermé</p>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Association César Geloso & Pénélope Bigazzi. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

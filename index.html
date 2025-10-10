@@ -1,55 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site en construction - César Geloso</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fa;
-      color: #343a40;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      flex-direction: column;
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .emoji {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .ssl-banner {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #e0f7fa;
-      color: #00796b;
-      padding: 10px;
-      text-align: center;
-      font-size: 14px;
-      box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association César Geloso & Pénélope Bigazzi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="emoji">🚧</div>
-  <h1>Site en construction</h1>
-  <p>Ce site est actuellement en cours de développement.<br>Merci de revenir bientôt !</p>
+    <header>
+        <!-- Bandeau pleine largeur -->
+        <div class="header-banner">
+            <img src="bandeau d'accueil.jpg" alt="Bandeau Association">
+        </div>
+        
+        <nav>
+            <div class="logo">
+                <!-- Logo + Titre -->
+                <img src="asso-logo.jpg" alt="Logo Association">
+                <h1>César Geloso & Pénélope Bigazzi</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="association.html">Association</a></li>
+                <li><a href="cesar-geloso.html">César Geloso</a></li>
+                <li><a href="penelope-bigazzi.html">Pénélope Bigazzi</a></li>
+                <li><a href="cd.html">Notre CD</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-  <div class="ssl-banner">🔒 Ce site est protégé par un certificat SSL – votre connexion est sécurisée.</div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Bienvenue</h2>
+                <p>Découvrez l'univers musical de deux compositeurs exceptionnels</p>
+                <div class="hero-buttons">
+                    <a href="cesar-geloso.html" class="btn btn-primary">César Geloso</a>
+                    <a href="penelope-bigazzi.html" class="btn btn-secondary">Pénélope Bigazzi</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="introduction">
+            <div class="container">
+                <h2>Notre Association</h2>
+                <p>Notre association a pour vocation de promouvoir et préserver l'œuvre de deux compositeurs remarquables : César Geloso et Pénélope Bigazzi. À travers nos activités, nous souhaitons faire découvrir leur héritage musical et partager leur passion pour la composition.</p>
+            </div>
+        </section>
+
+        <section class="composers-preview">
+            <div class="container">
+                <div class="composer-card">
+                    <div class="composer-card-content">
+                        <h3>César Geloso</h3>
+                        <p>Découvrez la vie et l'œuvre de ce compositeur talentueux qui a marqué son époque par ses créations musicales uniques.</p>
+                        <a href="cesar-geloso.html" class="btn-link">En savoir plus →</a>
+                    </div>
+                </div>
+                <div class="composer-card">
+                    <div class="composer-card-content">
+                        <h3>Pénélope Bigazzi</h3>
+                        <p>Plongez dans l'univers créatif d'une compositrice dont les œuvres continuent d'inspirer les mélomanes.</p>
+                        <a href="penelope-bigazzi.html" class="btn-link">En savoir plus →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cd-promo">
+            <div class="container">
+                <h2>Notre CD</h2>
+                <p>Découvrez notre collection d'enregistrements présentant les plus belles œuvres de nos compositeurs.</p>
+                <a href="cd.html" class="btn btn-primary">Voir le CD</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Association César Geloso & Pénélope Bigazzi. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
