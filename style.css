@@ -825,8 +825,19 @@ footer p {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+    html, body {
+        font-size: 14px; /* ↓ taille globale du texte sur mobile */
+    }
+
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1rem; }
+    h4, h5, h6 { font-size: 0.9rem; }
+    p, li, a, label, input, textarea, select {
+        font-size: 0.9rem;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -852,10 +863,11 @@ footer p {
     
     .nav-menu a {
         color: white;
+        font-size: 0.95rem; /* ↓ lien un peu plus petit */
     }
 
     .logo h1 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .logo img {
@@ -867,17 +879,17 @@ footer p {
     }
 
     .hero-content h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .composer-hero h2,
     .cd-hero h2,
     .contact-hero h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .cd-showcase,
