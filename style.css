@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     color: #1a1a2e;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -65,21 +65,23 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-shrink: 0;
 }
 
 .logo img {
-    height: 80px;
+    height: 70px;
     width: auto;
     object-fit: contain;
 }
 
 .logo h1 {
     color: #2c3e50;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: -0.5px;
     margin: 0;
+    white-space: nowrap;
 }
 
 @keyframes slideDown {
@@ -825,19 +827,19 @@ footer p {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.6rem;
+    }
+}
+
 @media (max-width: 768px) {
-    html, body {
-        font-size: 14px; /* ↓ taille globale du texte sur mobile */
-    }
-
-    h1 { font-size: 1.4rem; }
-    h2 { font-size: 1.2rem; }
-    h3 { font-size: 1rem; }
-    h4, h5, h6 { font-size: 0.9rem; }
-    p, li, a, label, input, textarea, select {
-        font-size: 0.9rem;
-    }
-
     .hamburger {
         display: flex;
     }
@@ -863,7 +865,7 @@ footer p {
     
     .nav-menu a {
         color: white;
-        font-size: 0.95rem; /* ↓ lien un peu plus petit */
+        font-size: 1rem;
     }
 
     .logo h1 {
@@ -879,17 +881,17 @@ footer p {
     }
 
     .hero-content h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .composer-hero h2,
     .cd-hero h2,
     .contact-hero h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .cd-showcase,
